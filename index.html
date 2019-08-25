@@ -1,0 +1,176 @@
+<html>
+
+    <head>
+        <link rel="stylesheet"
+              href="./piano.css">
+        <script src="./piano.js"></script>
+    </head>
+
+    <body>
+        <div class="slidecontainer">
+            <input type="range"
+                   min="1"
+                   max="100"
+                   value="30"
+                   class="slider">
+            <span>DELAY TIME</span>
+
+        </div>
+        <div class="slidecontainer">
+            <input type="range"
+                   min="1"
+                   max="100"
+                   value="30"
+                   class="slider"
+                   id="delayGain">
+            <span>DELAY GAIN</span>
+
+        </div>
+
+        <div class="slidecontainer">
+            <input type="range"
+                   min="1"
+                   max="200"
+                   value="50"
+                   class="slider"
+                   id="volume">
+            <span>VOLUME</span>
+        </div>
+
+
+        <div class="types">
+            <label class="container">Square
+                <input type="radio"
+                       onclick="setType('square')"
+                       checked="checked"
+                       name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Sine
+                <input type="radio"
+                       onclick="setType('sine')"
+                       name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Triangle
+                <input type="radio"
+                       onclick="setType('triangle')"
+                       name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Sawtooth
+                <input type="radio"
+                       onclick="setType('sawtooth')"
+                       name="radio">
+                <span class="checkmark"></span>
+            </label>
+
+        </div>
+        <div class="slidecontainer">
+            <input type="range"
+                   min="1"
+                   max="300"
+                   value="30"
+                   class="slider"
+                   id="release">
+            <span>RELEASE</span>
+        </div>
+        <section id="wrap">
+            <section id="main">
+                <div class="nowplaying"></div>
+                <div class="keys">
+                    <div data-key="65"
+                         class="key"
+                         onclick="play(3)"
+                         data-note="3">
+                        <span class="hints">A</span>
+                    </div>
+                    <div data-key="87"
+                         class="key sharp"
+                         onclick="play(4)"
+                         data-note="4">
+                        <span class="hints">W</span>
+                    </div>
+                    <div data-key="83"
+                         class="key"
+                         onclick="play(5)"
+                         data-note="5">
+                        <span class="hints">S</span>
+                    </div>
+                    <div data-key="69"
+                         class="key sharp"
+                         data-note="6">
+                        <span class="hints">E</span>
+                    </div>
+                    <div data-key="68"
+                         class="key"
+                         data-note="7">
+                        <span class="hints">D</span>
+                    </div>
+                    <div data-key="70"
+                         class="key"
+                         data-note="8">
+                        <span class="hints">F</span>
+                    </div>
+                    <div data-key="84"
+                         class="key sharp"
+                         data-note="9">
+                        <span class="hints">T</span>
+                    </div>
+                    <div data-key="71"
+                         class="key"
+                         data-note="10">
+                        <span class="hints">G</span>
+                    </div>
+                    <div data-key="89"
+                         class="key sharp"
+                         data-note="11">
+                        <span class="hints">Y</span>
+                    </div>
+                    <div data-key="72"
+                         class="key"
+                         data-note="12">
+                        <span class="hints">H</span>
+                    </div>
+                    <div data-key="85"
+                         class="key sharp"
+                         data-note="13">
+                        <span class="hints">U</span>
+                    </div>
+                    <div data-key="74"
+                         class="key"
+                         data-note="14">
+                        <span class="hints">J</span>
+                    </div>
+                    <div data-key="75"
+                         class="key"
+                         data-note="15">
+                        <span class="hints">K</span>
+                    </div>
+                    <div data-key="79"
+                         class="key sharp"
+                         data-note="16">
+                        <span class="hints">O</span>
+                    </div>
+                    <div data-key="76"
+                         class="key"
+                         data-note="17">
+                        <span class="hints">L</span>
+                    </div>
+                    <div data-key="80"
+                         class="key sharp"
+                         data-note="18">
+                        <span class="hints">P</span>
+                    </div>
+                    <div data-key="186"
+                         class="key"
+                         data-note="19">
+                        <span class="hints">;</span>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </body>
+
+</html>
